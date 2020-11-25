@@ -13,6 +13,17 @@ class TestPub(unittest.TestCase):
         self.drinks = [self.drink_1, self.drink_2]
         self.pub = Pub("The Prancing Pony", 100, self.drinks)
 
+        self.customer_1 = Customer("Fred", 25, 17)
+        self.customer_2 = Customer("Jane", 40, 18)
+
+    def test_check_customer_age__False(self):
+        self.pub.check_customer_age(self.customer_1)
+        self.assertEqual(False, self.pub.check_customer_age(self.customer_1))
+
+    def test_check_customer_age__True(self):
+        self.pub.check_customer_age(self.customer_2)
+        self.assertEqual(True, self.pub.check_customer_age(self.customer_2))
+    
     def test_pub_has_name(self):
         self.assertEqual("The Prancing Pony", self.pub.name)
 

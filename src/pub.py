@@ -10,3 +10,8 @@ class Pub():
 
     def gives_drink(self, drink):
         self.drinks.remove(drink)
+
+    def check_customer_age(self, customer):
+        if customer.age >= 18:
+            return True
+        return False
