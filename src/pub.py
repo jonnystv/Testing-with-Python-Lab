@@ -4,5 +4,9 @@ class Pub():
         self.money = money
         self.drinks = drinks
 
-    # def stock_count(self):
-    #     return len(self.drinks)
+
+    def takes_payment(self, drink):
+        self.money += drink.price
+
+    def gives_drink(self, drink):
+        self.drinks.remove(drink)

@@ -3,7 +3,7 @@ from src.drink import Drink
 
 class TestDrink(unittest.TestCase):
     def setUp(self):
-        self.drink = Drink("beer", 4.00)
+        self.drink = Drink("beer", 4)
 
 
     def test_drink_has_name(self):
@@ -11,4 +11,4 @@ class TestDrink(unittest.TestCase):
 
 
     def test_drink_has_price(self):
-        self.assertEqual(4.00, self.drink.price)
+        self.assertEqual(4, self.drink.price)
